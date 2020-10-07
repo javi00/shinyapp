@@ -1,0 +1,69 @@
+---
+title: "Wildfires Shinyapp"
+author: "Javier Vallejos"
+date: "7/10/2020"
+output: ioslides_presentation
+---
+
+
+## Shiny App 
+
+You can visit my shiny app on this links [Wildfires](https://javi00.shinyapps.io/Wildfires/). This app includes a map with wildfires in Bolivia. 
+
+Also you can download the project in my [github](https://github.com/javi00/shinyapp) 
+
+
+I used  two libraries:
+```{r}
+library(shiny)
+library(leaflet)
+```
+
+## The ui.R file
+
+#### I used the follow funtions in this part
+```{r, echo = TRUE, eval=FALSE}
+
+            sliderInput(" ")
+            checkboxInput(" ")
+            div(" ",style = "color:blue")
+
+mainPanel:
+           
+            leafletOutput(" ")  # to view the map
+            h3(" "),
+            h4(" "),
+            textOutput(" ")
+ 
+```
+
+
+## the server.R file
+#### I used the follow funtions in server part
+```{r, echo = TRUE, eval=FALSE}
+
+   reactive({ })
+   renderLeaflet({ })  # to plot a map 
+   
+   leaflet()
+   addTiles() 
+   setView()        # to  view a specific country 
+   addCircles()     # to add the points
+   
+   renderText({ })
+  
+```
+
+
+## Results
+
+```{r, echo = TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+
+library(imager)
+myimg <- load.image("wildfiresapp.png")
+plot(myimg, axes=FALSE)
+
+```
+
+## Thanks!!
+
